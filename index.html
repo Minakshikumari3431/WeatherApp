@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Weather App</h1>
+    
+    <div class="tab-container">
+      <p class="tab current-tab" data-tab="your-weather">Your Weather</p>
+      <p class="tab" data-tab="search-weather">Search Weather</p>
+    </div>
+
+    <div class="weather-container">
+
+      <!-- Location Permission -->
+      <div class="sub-container grant-location-container active">
+        <img src="assets/location.png" alt="location icon" width="80" />
+        <p>Grant Location Access</p>
+        <p>Allow location access to get weather info</p>
+        <button class="btn grant-access-btn">Grant Access</button>
+      </div>
+
+      <!-- Search Form -->
+      <form class="form-container">
+        <input type="text" placeholder="Enter city name..." required />
+        <button type="submit" class="btn">🔍</button>
+      </form>
+
+      <!-- Loading -->
+      <div class="sub-container loading-container">
+        <img src="assets/loading.gif" width="80" />
+        <p>Loading...</p>
+      </div>
+
+      <!-- Weather Info -->
+      <div class="sub-container user-info-container">
+        <div class="name">
+          <img src="assets/location.png" />
+          <p data-city>City</p>
+        </div>
+        <img data-weatherIcon />
+        <p data-temp>0°C</p>
+        <div class="parameter-container">
+          <div class="parameter">
+            <img src="assets/weather-icons/wind.png" />
+            <p>Windspeed</p>
+            <p data-windspeed>0 m/s</p>
+          </div>
+          <div class="parameter">
+            <img src="assets/weather-icons/humidity.png" />
+            <p>Humidity</p>
+            <p data-humidity>0%</p>
+          </div>
+          <div class="parameter">
+            <img src="assets/weather-icons/cloud.png" />
+            <p>Clouds</p>
+            <p data-clouds>0%</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
